@@ -175,11 +175,8 @@
   .rev-author { margin-top: 12px; font-size: 13px; font-weight: 800; color: #c2520a; }
 
   /* ── FAQ ── */
-  .faq-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 44px; align-items: start; }
-  .faq-illo img { width: 100%; border-radius: 24px; box-shadow: 0 16px 48px rgba(180,100,20,0.15); border: 3px solid #fcd9a8; object-fit: cover; }
-  .faq-illo .illo-fallback { width: 100%; height: 400px; background: linear-gradient(145deg,#fef3c7,#dcfce7); border-radius: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border: 3px solid #fcd9a8; font-size: 80px; }
-  .faq-illo .illo-fallback span { font-size: 15px; color: #7c5c3a; font-weight: 600; }
-  .faq-list { display: flex; flex-direction: column; gap: 10px; }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 44px; align-items: start; }
+  .faq-list { display: contents; }
   .faq-card { background: #fff; border-radius: 16px; padding: 20px 22px; border: 1.5px solid #e8d9c4; box-shadow: 0 2px 8px rgba(180,100,20,0.04); }
   .faq-q { font-size: 15px; font-weight: 800; color: #1c1005; margin-bottom: 9px; display: flex; gap: 10px; align-items: flex-start; }
   .faq-q-icon { color: #ea580c; flex-shrink: 0; margin-top: 1px; }
@@ -203,9 +200,51 @@
   .ci span { color: rgba(255,255,255,0.6); font-size: 14px; }
   .work-note { margin-top: 14px; background: rgba(249,115,22,0.2); border: 1px solid rgba(249,115,22,0.3); border-radius: 12px; padding: 14px 18px; font-size: 14px; color: #fed7aa; font-weight: 600; }
 
-  footer { background: #0f1f0b; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; }
+  footer { background: #0f1f0b; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
   footer .logo { color: #4ade80; font-size: 18px; font-weight: 900; }
   footer span { font-size: 13px; color: #4b5563; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    nav { padding: 14px 20px; }
+    nav ul { display: none; }
+    .nav-right { gap: 8px; }
+    .btn-nav { padding: 9px 16px; font-size: 13px; }
+
+    .hero { grid-template-columns: 1fr; padding: 36px 20px 40px; gap: 28px; }
+    .hero h1 { font-size: 38px; }
+    .hero-desc { max-width: 100%; }
+    .hero-right { order: -1; }
+    .photo-card img { height: 260px; }
+    .photo-card { min-height: 260px; }
+    .mini-row { flex-wrap: wrap; }
+    .mini { min-width: calc(50% - 6px); }
+
+    .stats { padding: 20px; flex-wrap: wrap; gap: 18px; justify-content: center; }
+    .stat { min-width: 120px; }
+
+    .section { padding: 44px 20px; }
+    .adv-grid { grid-template-columns: 1fr; gap: 14px; }
+    .prices-wrap { flex-direction: column; max-width: 100%; }
+    .how-grid { grid-template-columns: 1fr; gap: 28px; }
+    .rev-grid { grid-template-columns: 1fr; gap: 14px; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 28px; }
+    .sec-title { font-size: 28px; }
+    footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 6px; }
+  }
+
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 30px; }
+    .hero-cta { flex-direction: column; align-items: stretch; }
+    .btn-orange, .btn-outline-g { text-align: center; }
+    .hero-links { flex-direction: column; align-items: flex-start; }
+    .mini-row { flex-direction: column; }
+    .stats .n { font-size: 28px; }
+    .adv-grid { grid-template-columns: 1fr; }
+    .section-with-illo { grid-template-columns: 1fr; }
+    .section-illo { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -446,67 +485,19 @@
   </div>
 </section>
 
-<!-- FAQ + картинка рядом -->
+<!-- FAQ -->
 <section class="section bg-warm">
   <div class="chip">FAQ</div>
   <div class="sec-title">Часто задаваемые вопросы</div>
-  <div class="faq-wrap">
-    <div class="faq-list">
-      <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Как проходит первое занятие?</div><div class="faq-a">30 минут бесплатно: тест на уровень, выявление пробелов, обсуждение целей, составление индивидуального плана занятий.</div></div>
-      <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Сколько занятий нужно для результата?</div><div class="faq-a">Устранить пробел — 3–5 занятий. Улучшить оценку на 2–3 балла — 10–12 занятий. Интенсив к контрольной — 2–3 занятия в неделю.</div></div>
-      <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>С какими классами вы работаете?</div><div class="faq-a">Со школьниками 8–11 классов — школьная программа и углублённое изучение. Подход адаптируется под возраст и уровень.</div></div>
-      <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Как организованы онлайн-занятия?</div><div class="faq-a">Google Meet или Яндекс Телемост. Интерактивная доска, презентации. Перед первым уроком помогу всё настроить.</div></div>
-      <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Есть ли домашние задания?</div><div class="faq-a">Да — конспекты, 2–5 задач, тесты по теории. Проверяю ДЗ до следующего занятия и разбираю ошибки.</div></div>
-      <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Можно ли перенести занятие?</div><div class="faq-a">Да, при уведомлении за 24 часа — перенос без потери оплаты.</div></div>
-      <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Как оплатить?</div><div class="faq-a">Карта Сбербанк РБ / БСБ банк, или ЕРИП без процентов. Предоплата за 1 или несколько занятий вперёд.</div></div>
-      <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>С кем вы не работаете?</div><div class="faq-a">С теми, кто ожидает результат за одно занятие, не проявляет интереса к учёбе или не делает домашние задания.</div></div>
-    </div>
-    <!-- Вторая картинка из Dropbox / fallback SVG -->
-    <div class="faq-illo">
-      <img
-        src="https://www.dropbox.com/scl/fi/2ff52cv4j00al9f1umss6/5328134710443579053_120.jpg?rlkey=mse9qz5wgtk05mrozwxkqa7ot&dl=1"
-        alt="Химия — это интересно"
-        style="height:520px;width:100%;object-fit:cover"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      >
-      <!-- Fallback SVG иллюстрация для preview -->
-      <div class="illo-fallback" style="display:none; flex-direction:column; gap:12px; height:520px">
-        <svg width="260" height="280" viewBox="0 0 260 280" xmlns="http://www.w3.org/2000/svg">
-          <defs><radialGradient id="bg2" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#fef9c3"/><stop offset="100%" stop-color="#dcfce7"/></radialGradient></defs>
-          <rect width="260" height="280" fill="url(#bg2)" rx="20"/>
-          <!-- большая колба по центру -->
-          <rect x="108" y="60" width="44" height="14" rx="4" fill="#9ca3af"/>
-          <rect x="116" y="74" width="28" height="36" rx="3" fill="none" stroke="#6b7280" stroke-width="2.5"/>
-          <path d="M90 112 L70 170 Q66 196 90 196 L170 196 Q194 196 190 170 L170 112 Z" fill="url(#flFill)" stroke="#ea580c" stroke-width="3"/>
-          <defs><linearGradient id="flFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bbf7d0" stop-opacity="0.7"/><stop offset="70%" stop-color="#4ade80" stop-opacity="0.8"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0.9"/></linearGradient></defs>
-          <!-- пар -->
-          <ellipse cx="130" cy="106" rx="16" ry="6" fill="#fff" opacity="0.65"/>
-          <ellipse cx="122" cy="94" rx="10" ry="6" fill="#fff" opacity="0.45"/>
-          <ellipse cx="138" cy="86" rx="8" ry="5" fill="#fff" opacity="0.3"/>
-          <!-- стол -->
-          <rect x="0" y="220" width="260" height="12" rx="4" fill="#d4a574"/>
-          <!-- пробирки -->
-          <rect x="30" y="178" width="14" height="42" rx="7" fill="#fca5a5" opacity="0.9"/>
-          <rect x="52" y="172" width="14" height="48" rx="7" fill="#6ee7b7" opacity="0.9"/>
-          <rect x="74" y="182" width="14" height="38" rx="7" fill="#93c5fd" opacity="0.9"/>
-          <rect x="172" y="176" width="14" height="44" rx="7" fill="#fbbf24" opacity="0.9"/>
-          <rect x="194" y="182" width="14" height="38" rx="7" fill="#f87171" opacity="0.9"/>
-          <rect x="216" y="170" width="14" height="50" rx="7" fill="#c4b5fd" opacity="0.9"/>
-          <!-- молекулы вокруг -->
-          <circle cx="40" cy="130" r="8" fill="#fb923c" opacity="0.7"/>
-          <circle cx="58" cy="118" r="6" fill="#4ade80" opacity="0.7"/>
-          <line x1="48" y1="126" x2="52" y2="122" stroke="#9ca3af" stroke-width="2" opacity="0.7"/>
-          <circle cx="210" cy="90" r="9" fill="#fbbf24" opacity="0.6"/>
-          <circle cx="228" cy="104" r="6" fill="#f97316" opacity="0.6"/>
-          <line x1="219" y1="94" x2="222" y2="100" stroke="#9ca3af" stroke-width="2" opacity="0.6"/>
-          <!-- звёздочки/блики -->
-          <text x="38" y="60" font-size="18" opacity="0.4">✨</text>
-          <text x="190" y="50" font-size="16" opacity="0.35">⭐</text>
-          <text x="12" y="170" font-size="14" opacity="0.3">🌟</text>
-        </svg>
-        <span>Занятия химией — это весело!</span>
-      </div>
-    </div>
+  <div class="faq-grid">
+    <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Как проходит первое занятие?</div><div class="faq-a">30 минут бесплатно: тест на уровень, выявление пробелов, обсуждение целей, составление индивидуального плана занятий.</div></div>
+    <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Сколько занятий нужно для результата?</div><div class="faq-a">Устранить пробел — 3–5 занятий. Улучшить оценку на 2–3 балла — 10–12 занятий. Интенсив к контрольной — 2–3 занятия в неделю.</div></div>
+    <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>С какими классами вы работаете?</div><div class="faq-a">Со школьниками 8–11 классов — школьная программа и углублённое изучение. Подход адаптируется под возраст и уровень.</div></div>
+    <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Как организованы онлайн-занятия?</div><div class="faq-a">Google Meet или Яндекс Телемост. Интерактивная доска, презентации. Перед первым уроком помогу всё настроить.</div></div>
+    <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Есть ли домашние задания?</div><div class="faq-a">Да — конспекты, 2–5 задач, тесты по теории. Проверяю ДЗ до следующего занятия и разбираю ошибки.</div></div>
+    <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Можно ли перенести занятие?</div><div class="faq-a">Да, при уведомлении за 24 часа — перенос без потери оплаты.</div></div>
+    <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Как оплатить?</div><div class="faq-a">Карта Сбербанк РБ / БСБ банк, или ЕРИП без процентов. Предоплата за 1 или несколько занятий вперёд.</div></div>
+    <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>С кем вы не работаете?</div><div class="faq-a">С теми, кто ожидает результат за одно занятие, не проявляет интереса к учёбе или не делает домашние задания.</div></div>
   </div>
 </section>
 
