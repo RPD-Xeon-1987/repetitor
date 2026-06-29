@@ -32,7 +32,7 @@
   /* ── HERO ── */
   .hero {
     display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
-    padding: 60px 60px 70px; background: #fdf6ec;
+    padding: 30px 60px 70px; background: #fdf6ec;
     position: relative; overflow: hidden;
   }
   /* тонкий орнамент из молекул в фоне */
@@ -133,7 +133,7 @@
   .section-illo .illo-fallback { width: 280px; height: 260px; background: linear-gradient(145deg, #fef3c7, #dcfce7); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 80px; border: 2px solid #fcd9a8; }
 
   /* ── ЦЕНЫ ── */
-  .prices-wrap { display: flex; gap: 24px; margin-top: 44px; max-width: 700px; }
+  .prices-wrap { display: flex; gap: 24px; margin-top: 44px; max-width: 700px; margin-left: auto; margin-right: auto; }
   .p-card { flex: 1; border-radius: 24px; padding: 36px 30px; border: 2px solid #e8d9c4; background: #fff; text-align: center; }
   .p-card.feat { background: linear-gradient(145deg,#16532b,#1a6b38); border-color: #16532b; box-shadow: 0 12px 36px rgba(22,83,43,0.25); }
   .p-chip-star { display: inline-block; background: linear-gradient(135deg,#f97316,#ea580c); color: #fff; font-size: 11px; font-weight: 800; padding: 5px 14px; border-radius: 100px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
@@ -252,7 +252,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#hero" class="logo">Химия<span>.by</span></a>
+  <a href="#hero" class="logo">repetitor-po-himii<span>.by</span></a>
   <ul>
     <li><a href="#advantages">Обо мне</a></li>
     <li><a href="#prices">Стоимость</a></li>
@@ -261,7 +261,7 @@
   </ul>
   <div class="nav-right">
     <a href="tel:+375293978720" class="nav-phone">+375 29 397-87-20</a>
-    <button class="btn-nav" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Записаться →</button>
+    <button class="btn-nav" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Записаться</button>
   </div>
 </nav>
 
@@ -284,17 +284,15 @@
       <a href="tel:+375293978720" class="hero-link">📞 +375 29 397-87-20</a>
     </div>
     <div class="hero-cta">
-      <button class="btn-orange" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">🎓 Заказать занятие</button>
-      <button class="btn-outline-g" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">30 мин — бесплатно</button>
+      <button class="btn-orange" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Заказать занятие</button>
     </div>
-    <div class="hero-note">⏰ Работаю с 10:00 до 20:00 <strong>без выходных</strong></div>
+    <div class="hero-note">⏰ Работаю с 10:00 до 20:00 <strong>ежедневно без выходных</strong></div>
   </div>
 
   <div class="hero-right">
     <div class="photo-card">
-      <!-- Ваша картинка из Dropbox: замените src на путь к локальному файлу при развёртывании -->
       <img
-        src="https://www.dropbox.com/scl/fi/2ff52cv4j00al9f1umss6/5328134710443579053_120.jpg?rlkey=mse9qz5wgtk05mrozwxkqa7ot&dl=1"
+        src="./chem.jpg"
         alt="Репетитор по химии Елена"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
       >
@@ -373,12 +371,6 @@
       </div>
     </div>
 
-    <div class="mini-row">
-      <div class="mini"><div class="mini-n">50 руб</div><div class="mini-l">7–9 класс / 60 мин</div></div>
-      <div class="mini"><div class="mini-n">75 руб</div><div class="mini-l">10–11 класс / 90 мин</div></div>
-      <div class="mini"><div class="mini-n red">БЕСП.</div><div class="mini-l">первые 30 минут</div></div>
-    </div>
-    <div class="free-strip">🎁 <span>Первый урок — 30 минут бесплатно. Запишитесь прямо сейчас!</span></div>
   </div>
 </section>
 
@@ -403,7 +395,7 @@
   <div class="chip">Мои преимущества</div>
   <div class="sec-title">Почему меня рекомендуют</div>
   <div class="adv-grid">
-    <div class="adv"><div class="adv-icon">📚</div><h3>Программа РБ 2025/2026</h3><p>Индивидуальное обучение, адаптированное под актуальную школьную программу Беларуси</p></div>
+    <div class="adv"><div class="adv-icon">📚</div><h3>Программа РБ 2026/2027 учебный год</h3><p>Индивидуальное обучение, адаптированное под актуальную школьную программу Беларуси</p></div>
     <div class="adv"><div class="adv-icon">💻</div><h3>Онлайн в удобное время</h3><p>Занятия в комфортной, поддерживающей атмосфере — без стресса и перегрузок</p></div>
     <div class="adv"><div class="adv-icon">🎓</div><h3>Опыт 10+ лет</h3><p>Занятия строятся под конкретные потребности ученика и его темп обучения</p></div>
     <div class="adv"><div class="adv-icon">🔬</div><h3>Лабораторный опыт 8+ лет</h3><p>Объясняю химию так, как она работает на практике — не сухая теория</p></div>
@@ -421,25 +413,21 @@
     <ellipse cx="60" cy="130" rx="16" ry="8" fill="#86efac" opacity="0.5"/>
   </svg>
   <div class="chip">Стоимость обучения</div>
-  <div class="sec-title">Прозрачные цены</div>
-  <div class="sec-sub">Первые 30 минут — <strong style="color:#dc2626">бесплатно</strong>. Запишитесь прямо сейчас!</div>
+  <div class="sec-sub">Ознакомительное занятие для новых учеников длительностью <strong style="color:#dc2626">30 минут бесплатно</strong>. Запишитесь прямо сейчас.</div>
   <div class="prices-wrap">
-    <div class="p-card">
+    <div class="p-card" style="text-align:center">
       <div class="p-class">7–9 класс</div>
       <div class="p-dur">60 минут • Онлайн</div>
-      <div class="p-num">50 <span class="p-rub">руб.</span></div>
+      <div class="p-num">55 <span class="p-rub">руб.</span></div>
       <div class="p-per">за занятие</div>
-      <button class="p-btn" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Записаться →</button>
-      <div class="free-lbl">🎁 Первые 30 мин — бесплатно</div>
+      <button class="p-btn" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Записаться</button>
     </div>
-    <div class="p-card feat">
-      <div class="p-chip-star">⭐ Популярный</div>
+    <div class="p-card feat" style="text-align:center">
       <div class="p-class">10–11 класс</div>
       <div class="p-dur">90 минут • Онлайн</div>
-      <div class="p-num">75 <span class="p-rub">руб.</span></div>
+      <div class="p-num">80 <span class="p-rub">руб.</span></div>
       <div class="p-per">за занятие</div>
-      <button class="p-btn" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Записаться →</button>
-      <div class="free-lbl">🎁 Первые 30 мин — бесплатно</div>
+      <button class="p-btn" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Записаться</button>
     </div>
   </div>
 </section>
@@ -460,8 +448,7 @@
       <h4>🛠 Инструменты</h4>
       <div class="tool-row"><span>💻</span> Google Meet / Яндекс Телемост</div>
       <div class="tool-row"><span>✏️</span> Интерактивная доска для уравнений и схем</div>
-      <div class="tool-row"><span>📊</span> Презентации и видеоматериалы</div>
-      <div class="tool-row" style="border-bottom:none"><span>💬</span> Telegram / Viber — ДЗ и обратная связь</div>
+<div class="tool-row" style="border-bottom:none"><span>💬</span> Telegram / Viber — ДЗ и обратная связь</div>
       <div class="pay-box">
         <h5>💳 Как оплатить</h5>
         <p>Карта Сбербанк РБ / БСБ банк<br>ЕРИП на IBAN счёт — без процентов<br><strong style="color:#fff">Предоплата</strong> за 1 или несколько занятий</p>
@@ -540,39 +527,73 @@
       <input id="f-phone" placeholder="Номер телефона *" type="tel" required>
       <input id="f-class" placeholder="Класс ребёнка и цель занятий">
       <textarea id="f-comment" placeholder="Дополнительная информация (необязательно)"></textarea>
-      <button type="submit">🎓 Заказать занятие →</button>
+      <button type="submit">Заказать занятие</button>
     </form>
   </div>
 </section>
 
 <div id="tg-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:999;align-items:center;justify-content:center">
   <div style="background:#fff;border-radius:20px;padding:32px 28px;max-width:400px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.25)">
-    <div style="font-size:40px;margin-bottom:12px">✅</div>
-    <h3 style="color:#16532b;font-size:18px;margin-bottom:10px">Заявка готова!</h3>
-    <p style="color:#7c5c3a;font-size:14px;line-height:1.6;margin-bottom:20px">Данные скопированы в буфер обмена.<br>Нажмите кнопку — откроется Telegram,<br>вставьте текст и отправьте.</p>
-    <a id="tg-link" href="https://t.me/repetitor_himii" target="_blank"
-       style="display:block;background:linear-gradient(135deg,#2AABEE,#229ED9);color:#fff;padding:14px 24px;border-radius:100px;font-weight:800;font-size:15px;text-decoration:none;margin-bottom:12px">
-      Открыть Telegram →
-    </a>
+    <div id="modal-icon" style="font-size:44px;margin-bottom:12px">⏳</div>
+    <h3 id="modal-title" style="color:#16532b;font-size:18px;margin-bottom:10px">Отправляем заявку…</h3>
+    <p id="modal-text" style="color:#7c5c3a;font-size:14px;line-height:1.6;margin-bottom:20px"></p>
     <button onclick="document.getElementById('tg-modal').style.display='none'"
       style="background:none;border:none;color:#a8855a;font-size:13px;cursor:pointer">Закрыть</button>
   </div>
 </div>
 
 <script>
+/* ─── Telegram Bot API ─────────────────────────────────────────────
+   1. Создайте бота через @BotFather → скопируйте токен в BOT_TOKEN
+   2. Напишите боту любое сообщение, затем откройте:
+      https://api.telegram.org/bot<BOT_TOKEN>/getUpdates
+      Найдите "chat":{"id": XXXXXX} — это ваш CHAT_ID
+   ─────────────────────────────────────────────────────────────── */
+var BOT_TOKEN = 'ВСТАВЬТЕ_ТОКЕН_БОТА';
+var CHAT_ID   = 'ВСТАВЬТЕ_CHAT_ID';
+
 function sendToTelegram(e) {
   e.preventDefault();
   var name    = document.getElementById('f-name').value.trim();
   var phone   = document.getElementById('f-phone').value.trim();
   var cls     = document.getElementById('f-class').value.trim();
   var comment = document.getElementById('f-comment').value.trim();
-  var msg = '📚 Новая заявка с сайта\n'
+
+  var text = '📚 *Новая заявка с сайта*\n'
     + '👤 Имя: ' + name + '\n'
     + '📞 Телефон: ' + phone
     + (cls     ? '\n🎓 Класс/цель: ' + cls     : '')
-    + (comment ? '\n💬 Доп. info: ' + comment   : '');
-  try { navigator.clipboard.writeText(msg); } catch(err) {}
-  document.getElementById('tg-modal').style.display = 'flex';
+    + (comment ? '\n💬 Доп. info: '  + comment  : '');
+
+  var modal = document.getElementById('tg-modal');
+  modal.style.display = 'flex';
+  document.getElementById('modal-icon').textContent  = '⏳';
+  document.getElementById('modal-title').textContent = 'Отправляем заявку…';
+  document.getElementById('modal-text').textContent  = '';
+
+  fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'Markdown' })
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    if (data.ok) {
+      document.getElementById('modal-icon').textContent  = '✅';
+      document.getElementById('modal-title').textContent = 'Заявка отправлена!';
+      document.getElementById('modal-text').textContent  = 'Елена свяжется с вами в течение дня. Спасибо!';
+      document.getElementById('contactForm').reset();
+    } else {
+      throw new Error(data.description);
+    }
+  })
+  .catch(function(){
+    document.getElementById('modal-icon').textContent  = '⚠️';
+    document.getElementById('modal-title').textContent = 'Не удалось отправить';
+    document.getElementById('modal-text').innerHTML =
+      'Пожалуйста, напишите напрямую:<br>'
+      + '<a href="https://t.me/repetitor_himii" target="_blank" style="color:#2AABEE;font-weight:700">@repetitor_himii в Telegram</a>';
+  });
 }
 </script>
 
