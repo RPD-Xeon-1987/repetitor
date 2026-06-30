@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#16532b"/>
+  <!-- flask neck -->
+  <rect x="24" y="8" width="16" height="18" rx="3" fill="#fef3c7"/>
+  <!-- flask body -->
+  <path d="M20 26 L10 50 Q9 58 20 58 L44 58 Q55 58 54 50 L44 26 Z" fill="#4ade80" opacity="0.9"/>
+  <!-- liquid inside flask -->
+  <path d="M16 42 L11 52 Q10 57 20 57 L44 57 Q54 57 53 52 L48 42 Z" fill="#f97316" opacity="0.85"/>
+  <!-- bubbles -->
+  <circle cx="27" cy="48" r="3" fill="#fff" opacity="0.5"/>
+  <circle cx="36" cy="44" r="2" fill="#fff" opacity="0.4"/>
+  <circle cx="22" cy="52" r="1.5" fill="#fff" opacity="0.35"/>
+  <!-- steam lines -->
+  <path d="M28 24 Q26 19 28 14" stroke="#ea580c" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M36 24 Q38 19 36 14" stroke="#ea580c" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
