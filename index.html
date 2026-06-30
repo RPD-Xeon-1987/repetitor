@@ -3,19 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Репетитор по химии онлайн — Елена</title>
+<title>Репетитор по химии онлайн в Беларуси — Елена | Минск и вся РБ</title>
+<meta name="description" content="Репетитор по химии онлайн для школьников 8–11 классов в Беларуси. Подготовка к ЦТ, ликвидация пробелов. Первые 30 минут бесплатно. Минск и вся РБ.">
+<meta name="keywords" content="репетитор по химии онлайн Беларусь, репетитор химия Минск, подготовка к ЦТ химия, репетитор химия 10 11 класс, уроки химии онлайн РБ">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="BY-HM">
+<meta name="geo.placename" content="Минск, Беларусь">
+<link rel="canonical" href="https://rpd-xeon-1987.github.io/repetitor/">
+<meta property="og:title" content="Репетитор по химии онлайн — Елена | Беларусь">
+<meta property="og:description" content="Индивидуальные занятия по химии онлайн для школьников 8–11 классов. Минск и вся Беларусь. Первые 30 минут бесплатно.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rpd-xeon-1987.github.io/repetitor/">
+<meta property="og:image" content="https://rpd-xeon-1987.github.io/repetitor/chem.jpg">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSDTTZ7K');</script>
+<!-- End Google Tag Manager -->
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Segoe UI', Georgia, sans-serif; background: #fdf6ec; color: #2d1f0e; overflow-x: hidden; }
 
   /* ── NAV ── */
   nav {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 60px; background: #fdf6ec;
-    border-bottom: 1px solid #e8d9c4; position: sticky; top: 0; z-index: 100;
+    display: flex; flex-direction: column;
+    background: #fdf6ec; border-bottom: 1px solid #e8d9c4;
+    position: sticky; top: 0; z-index: 100;
     box-shadow: 0 2px 16px rgba(180,100,20,0.08);
   }
-  .logo { font-size: 22px; font-weight: 900; color: #16532b; }
+  .nav-top { display: flex; align-items: center; justify-content: space-between; padding: 16px 60px; }
+  .logo { font-size: 22px; font-weight: 900; color: #16532b; text-decoration: none; }
   .logo span { color: #ea580c; }
   nav ul { list-style: none; display: flex; gap: 30px; }
   nav ul li a { text-decoration: none; color: #6b4c2a; font-size: 15px; font-weight: 500; transition: color .2s; }
@@ -25,6 +44,7 @@
   .nav-icon { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #fff8f0; border: 1.5px solid #e8d9c4; transition: background .2s; text-decoration: none; }
   .nav-icon:hover { background: #fed7aa; }
   .nav-icon-mobile { display: none; }
+  .nav-anchors-mobile { display: none; }
   .btn-nav {
     background: linear-gradient(135deg, #f97316, #ea580c);
     color: #fff; border: none; padding: 11px 26px; border-radius: 100px;
@@ -210,13 +230,23 @@
 
   /* ── MOBILE ── */
   @media (max-width: 900px) {
-    nav { padding: 14px 20px; }
+    .nav-top { padding: 10px 16px; }
+    .logo { font-size: 15px; }
     nav ul { display: none; }
     .nav-right { gap: 8px; }
     .nav-phone { display: none; }
     .nav-icon { display: none; }
     .nav-icon-mobile { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #fff8f0; border: 1.5px solid #e8d9c4; text-decoration: none; }
-    .btn-nav { padding: 9px 16px; font-size: 13px; }
+    .btn-nav { padding: 9px 14px; font-size: 12px; }
+    .nav-anchors-mobile {
+      display: flex; justify-content: space-around; align-items: center;
+      padding: 8px 12px; border-top: 1px solid #e8d9c4; gap: 2px;
+    }
+    .nav-anchors-mobile a {
+      text-decoration: none; color: #6b4c2a; font-size: 11px; font-weight: 600;
+      padding: 4px 6px; border-radius: 8px; white-space: nowrap; transition: color .2s;
+    }
+    .nav-anchors-mobile a:hover { color: #ea580c; }
 
     .hero { grid-template-columns: 1fr; padding: 36px 20px 40px; gap: 28px; }
     .hero h1 { font-size: 38px; }
@@ -254,9 +284,14 @@
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSDTTZ7K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- NAV -->
 <nav>
+  <div class="nav-top">
   <a href="#hero" class="logo">repetitor-po-himii<span>.by</span></a>
   <ul>
     <li><a href="#advantages">Обо мне</a></li>
@@ -285,6 +320,14 @@
     </a>
     <button class="btn-nav" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Записаться</button>
   </div>
+  </div>
+  <div class="nav-anchors-mobile">
+    <a href="#advantages">Обо мне</a>
+    <a href="#prices">Стоимость</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacts">Контакты</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -292,7 +335,7 @@
   <div>
     <div class="eyebrow"><span class="dot"></span><span class="eye-text">Репетитор по химии онлайн</span></div>
     <h1>Химия<br>становится<br><em>понятной</em></h1>
-    <div class="hero-sub">Индивидуальные занятия для школьников 8–11 классов</div>
+    <div class="hero-sub">Репетитор по химии онлайн в Беларуси — для школьников 8–11 классов</div>
     <p class="hero-desc">Помогу вашему ребёнку полюбить химию и уверенно освоить школьную программу в комфортной, поддерживающей атмосфере</p>
     <div class="hero-links">
       <a href="https://t.me/repetitor_himii" target="_blank" class="hero-link">
@@ -315,7 +358,8 @@
     <div class="photo-card">
       <img
         src="./chem.jpg"
-        alt="Репетитор по химии Елена"
+        alt="Репетитор по химии онлайн Елена — занятия для школьников в Беларуси"
+        title="Репетитор по химии Елена — Минск и вся Беларусь"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
       >
       <div class="img-fallback" style="display:none">
@@ -415,7 +459,7 @@
     <line x1="106" y1="91" x2="110" y2="96" stroke="#f97316" stroke-width="3"/>
   </svg>
   <div class="chip">Мои преимущества</div>
-  <div class="sec-title">Почему меня рекомендуют</div>
+  <h2 class="sec-title">Почему выбирают репетитора по химии Елену</h2>
   <div class="adv-grid">
     <div class="adv"><div class="adv-icon">📚</div><h3>Программа РБ 2026/2027 учебный год</h3><p>Индивидуальное обучение, адаптированное под актуальную школьную программу Беларуси</p></div>
     <div class="adv"><div class="adv-icon">💻</div><h3>Онлайн в удобное время</h3><p>Занятия в комфортной, поддерживающей атмосфере — без стресса и перегрузок</p></div>
@@ -435,6 +479,7 @@
     <ellipse cx="60" cy="130" rx="16" ry="8" fill="#86efac" opacity="0.5"/>
   </svg>
   <div class="chip">Стоимость обучения</div>
+  <h2 class="sec-title">Стоимость занятий по химии онлайн</h2>
   <div class="sec-sub">Ознакомительное занятие для новых учеников длительностью <strong style="color:#dc2626">30 минут бесплатно</strong>. Запишитесь прямо сейчас.</div>
   <div class="prices-wrap">
     <div class="p-card" style="text-align:center">
@@ -457,7 +502,7 @@
 <!-- КАК ПРОХОДЯТ ЗАНЯТИЯ -->
 <section class="section bg-warm">
   <div class="chip">Как всё устроено</div>
-  <div class="sec-title">Как проходят занятия</div>
+  <h2 class="sec-title">Как проходят онлайн-занятия по химии</h2>
   <div class="how-grid">
     <div class="timeline">
       <div class="t-item"><div class="t-num">1</div><div class="t-body"><h4>Оставляете заявку</h4><p>Пишете в Telegram, Viber или заполняете форму на сайте</p></div></div>
@@ -490,7 +535,7 @@
     <rect x="100" y="55" width="32" height="65" rx="16" fill="#bfdbfe" stroke="#60a5fa" stroke-width="2.5"/>
   </svg>
   <div class="chip">Отзывы</div>
-  <div class="sec-title">Что говорят ученики и родители</div>
+  <h2 class="sec-title">Отзывы об уроках химии онлайн</h2>
   <div class="rev-grid">
     <div class="rev"><div class="rev-stars">★★★★★</div><div class="rev-text">«Раньше я совсем не понимал химию, а теперь с помощью Елены всё стало на свои места. Объясняет очень просто и доступно, даже самые сложные темы.»</div><div class="rev-author">Андрей, 10 класс</div></div>
     <div class="rev"><div class="rev-stars">★★★★★</div><div class="rev-text">«Средний балл ребёнка по химии повысился до 9! Материал даётся структурно, подробно разбирает задания, новые темы, готовит к контрольным работам!»</div><div class="rev-author">Ольга, мама ученицы</div></div>
@@ -504,7 +549,7 @@
 <!-- FAQ -->
 <section class="section bg-warm" id="faq">
   <div class="chip">FAQ</div>
-  <div class="sec-title">Часто задаваемые вопросы</div>
+  <h2 class="sec-title">Вопросы о репетиторе по химии онлайн</h2>
   <div class="faq-grid">
     <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Как проходит первое занятие?</div><div class="faq-a">30 минут бесплатно: тест на уровень, выявление пробелов, обсуждение целей, составление индивидуального плана занятий.</div></div>
     <div class="faq-card"><div class="faq-q"><span class="faq-q-icon">◆</span>Сколько занятий нужно для результата?</div><div class="faq-a">Устранить пробел — 3–5 занятий. Улучшить оценку на 2–3 балла — 10–12 занятий. Интенсив к контрольной — 2–3 занятия в неделю.</div></div>
@@ -522,7 +567,7 @@
   <div class="contact-inner">
     <div>
       <div class="chip" style="background:rgba(249,115,22,0.25);color:#fed7aa">Записаться</div>
-      <div class="sec-title">Начнём уже сегодня</div>
+      <h2 class="sec-title">Начнём уже сегодня</h2>
       <div class="sec-sub">Оставьте заявку — перезвоню или напишу в течение дня</div>
       <div class="ci-list">
         <a href="https://t.me/repetitor_himii" target="_blank" class="ci" style="text-decoration:none">
@@ -601,10 +646,8 @@ function sendToTelegram(e) {
   .then(function(r){ return r.json(); })
   .then(function(data){
     if (data.ok) {
-      document.getElementById('modal-icon').textContent  = '✅';
-      document.getElementById('modal-title').textContent = 'Заявка отправлена!';
-      document.getElementById('modal-text').textContent  = 'Елена свяжется с вами в течение дня. Спасибо!';
       document.getElementById('contactForm').reset();
+      window.location.href = './thanks.html';
     } else {
       throw new Error(data.description);
     }
