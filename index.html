@@ -20,8 +20,11 @@
   nav ul { list-style: none; display: flex; gap: 30px; }
   nav ul li a { text-decoration: none; color: #6b4c2a; font-size: 15px; font-weight: 500; transition: color .2s; }
   nav ul li a:hover { color: #ea580c; }
-  .nav-right { display: flex; gap: 14px; align-items: center; }
+  .nav-right { display: flex; gap: 10px; align-items: center; }
   .nav-phone { font-size: 14px; color: #16532b; font-weight: 700; text-decoration: none; }
+  .nav-icon { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #fff8f0; border: 1.5px solid #e8d9c4; transition: background .2s; text-decoration: none; }
+  .nav-icon:hover { background: #fed7aa; }
+  .nav-icon-mobile { display: none; }
   .btn-nav {
     background: linear-gradient(135deg, #f97316, #ea580c);
     color: #fff; border: none; padding: 11px 26px; border-radius: 100px;
@@ -58,7 +61,7 @@
   .hero-desc { margin-top: 14px; font-size: 16px; color: #7c5c3a; line-height: 1.78; max-width: 440px; }
   .hero-links { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
   .hero-link { display: flex; align-items: center; gap: 8px; text-decoration: none; font-size: 14px; font-weight: 600; padding: 9px 18px; background: #fff8f0; color: #c2520a; border-radius: 100px; border: 1.5px solid #fed7aa; }
-  .hero-cta { display: flex; gap: 14px; margin-top: 26px; align-items: center; flex-wrap: wrap; }
+  .hero-cta { display: flex; gap: 14px; margin-top: 26px; align-items: center; flex-wrap: wrap; justify-content: center; max-width: 440px; }
   .btn-orange { background: linear-gradient(135deg, #f97316, #ea580c); color: #fff; padding: 15px 36px; border-radius: 100px; font-size: 16px; font-weight: 800; border: none; cursor: pointer; box-shadow: 0 6px 20px rgba(234,88,12,0.42); }
   .btn-outline-g { background: transparent; color: #16532b; padding: 14px 28px; border-radius: 100px; font-size: 15px; font-weight: 700; border: 2px solid #16532b; cursor: pointer; }
   .hero-note { margin-top: 14px; font-size: 13px; color: #a8855a; }
@@ -132,7 +135,8 @@
   .section-illo .illo-fallback { width: 280px; height: 260px; background: linear-gradient(145deg, #fef3c7, #dcfce7); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 80px; border: 2px solid #fcd9a8; }
 
   /* ── ЦЕНЫ ── */
-  .prices-wrap { display: flex; gap: 24px; margin-top: 44px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .prices-wrap { display: flex; gap: 24px; margin-top: 44px; max-width: 700px; margin-left: auto; margin-right: auto; justify-content: center; }
+  .p-btn { width: fit-content; min-width: 160px; margin-left: auto; margin-right: auto; }
   .p-card { flex: 1; border-radius: 24px; padding: 36px 30px; border: 2px solid #e8d9c4; background: #fff; text-align: center; }
   .p-card.feat { background: linear-gradient(145deg,#16532b,#1a6b38); border-color: #16532b; box-shadow: 0 12px 36px rgba(22,83,43,0.25); }
   .p-chip-star { display: inline-block; background: linear-gradient(135deg,#f97316,#ea580c); color: #fff; font-size: 11px; font-weight: 800; padding: 5px 14px; border-radius: 100px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
@@ -209,6 +213,9 @@
     nav { padding: 14px 20px; }
     nav ul { display: none; }
     .nav-right { gap: 8px; }
+    .nav-phone { display: none; }
+    .nav-icon { display: none; }
+    .nav-icon-mobile { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #fff8f0; border: 1.5px solid #e8d9c4; text-decoration: none; }
     .btn-nav { padding: 9px 16px; font-size: 13px; }
 
     .hero { grid-template-columns: 1fr; padding: 36px 20px 40px; gap: 28px; }
@@ -259,6 +266,23 @@
   </ul>
   <div class="nav-right">
     <a href="tel:+375293978720" class="nav-phone">+375 29 397-87-20</a>
+    <!-- Иконки на десктопе -->
+    <a href="https://t.me/repetitor_himii" target="_blank" class="nav-icon" title="Telegram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+    </a>
+    <a href="viber://chat?number=%2B375293978720" class="nav-icon" title="Viber">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#7360F2"><path d="M11.993 0h-.002C5.366 0 0 5.373 0 12c0 2.637.847 5.082 2.285 7.07L.79 23.54l4.588-1.47A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 11.993 0zm6.21 17.095c-.26.733-1.29 1.344-2.121 1.523-.566.12-1.303.215-3.789-.814-3.18-1.315-5.228-4.537-5.387-4.745-.153-.208-1.285-1.712-1.285-3.266s.802-2.308 1.1-2.624c.26-.274.573-.343.764-.343.19 0 .381.002.548.01.176.009.412-.067.644.491.238.574.809 1.98.879 2.124.07.144.117.312.023.503-.093.19-.14.308-.278.475-.137.168-.288.375-.412.504-.137.14-.28.293-.12.574.16.281.711 1.174 1.527 1.9 1.049.936 1.933 1.224 2.214 1.365.28.14.443.117.607-.07.167-.188.712-.832.902-1.118.19-.286.38-.238.641-.143.261.096 1.657.781 1.94.924.28.143.47.214.538.333.068.119.068.686-.192 1.397z"/></svg>
+    </a>
+    <!-- Иконки только на мобильном -->
+    <a href="tel:+375293978720" class="nav-icon-mobile" title="Позвонить">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#16532b"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    </a>
+    <a href="https://t.me/repetitor_himii" target="_blank" class="nav-icon-mobile" title="Telegram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+    </a>
+    <a href="viber://chat?number=%2B375293978720" class="nav-icon-mobile" title="Viber">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#7360F2"><path d="M11.993 0h-.002C5.366 0 0 5.373 0 12c0 2.637.847 5.082 2.285 7.07L.79 23.54l4.588-1.47A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 11.993 0zm6.21 17.095c-.26.733-1.29 1.344-2.121 1.523-.566.12-1.303.215-3.789-.814-3.18-1.315-5.228-4.537-5.387-4.745-.153-.208-1.285-1.712-1.285-3.266s.802-2.308 1.1-2.624c.26-.274.573-.343.764-.343.19 0 .381.002.548.01.176.009.412-.067.644.491.238.574.809 1.98.879 2.124.07.144.117.312.023.503-.093.19-.14.308-.278.475-.137.168-.288.375-.412.504-.137.14-.28.293-.12.574.16.281.711 1.174 1.527 1.9 1.049.936 1.933 1.224 2.214 1.365.28.14.443.117.607-.07.167-.188.712-.832.902-1.118.19-.286.38-.238.641-.143.261.096 1.657.781 1.94.924.28.143.47.214.538.333.068.119.068.686-.192 1.397z"/></svg>
+    </a>
     <button class="btn-nav" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Записаться</button>
   </div>
 </nav>
@@ -597,7 +621,7 @@ function sendToTelegram(e) {
 
 <footer>
   <div class="logo">Химия<span style="color:#f97316">.by</span></div>
-  <span>© 2025 Репетитор по химии онлайн — Елена</span>
+  <span>© 2026 Репетитор по химии онлайн — Елена</span>
   <span>Беларусь • с 10:00 до 20:00 без выходных</span>
 </footer>
 
